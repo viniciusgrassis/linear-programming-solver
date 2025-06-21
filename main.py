@@ -3,7 +3,8 @@ from carregar_entrada import carregar_entrada
 from criar_tableau import criar_tableau
 from big_m_create import big_m_create
 from big_m_checker import big_m_checker
-from simplex import simplex
+from simplex import simplex, linha_pivo, pivoteamento
+from multi_solution_checker import multi_solution_checker
 
 np.set_printoptions(
     suppress=True,      
@@ -35,6 +36,14 @@ if __name__ == "__main__":
             tableau_final = simplex(tableau_inicial)
             print("Tableau final:")
             print(tableau_final)
+
+        teste_coluna = multi_solution_checker(tableau_final)
+        if teste_coluna is not None:
+            print("Múltiplas soluções:")
+            linha_alternativa = linha_pivo(tableau_final, teste_coluna)
+            tableau_alternativo = pivoteamento(tableau_final, linha_alternativa, teste_coluna)
+            print("Tableau alternativo:")
+            print(tableau_alternativo)
     else:
         print("Erro ao carregar.")
         exit(1)
