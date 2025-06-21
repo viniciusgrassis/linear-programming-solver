@@ -63,16 +63,5 @@ def simplex(tableau_inicial):
 
     return tableau
 
-if __name__ == "__main__":
-    c, a, r, b = carregar_entrada("modelo.txt")
-    if a is not None:
-        tableau_inicial = criar_tableau(c, a, r, b)
-        print("Tableau inicial:")
-        print(tableau_inicial)
-        tableau_final = simplex(tableau_inicial)
-        print("Tableau final:")
-        print(tableau_final)
-    else:
-        print("Erro ao carregar.")
-        exit(1)
+
     
