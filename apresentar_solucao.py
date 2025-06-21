@@ -10,7 +10,7 @@ def apresentar_solucao(tableau_final, num_var, num_sol = 1):
 
         z_otimo = tableau_final[0, -1]*-1
         solucao_str += f"\nValor ótimo para Z = {z_otimo:.2f}"
-        solucao_str += "---/ Variáveis básicas /---\n"
+        solucao_str += "\n\n---/ Variáveis básicas /---\n"
 
         for i in range(num_var):
             coluna_x = tableau_final[:, i + 1]

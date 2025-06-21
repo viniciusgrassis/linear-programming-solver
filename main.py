@@ -34,7 +34,7 @@ if __name__ == "__main__":
 
         teste_coluna = multi_solution_checker(tableau_final)
         if teste_coluna is not None:
-            print("Múltiplas soluções:")
+            print("\nMúltiplas soluções:")
             linha_alternativa = linha_pivo(tableau_final, teste_coluna)
             tableau_alternativo = pivoteamento(tableau_final, linha_alternativa, teste_coluna)
             apresentar_solucao(tableau_final, a.shape[1], num_sol=2)
