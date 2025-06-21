@@ -23,10 +23,8 @@ def big_m_checker(tableau_final, r, a):
             valor = tableau_final[linha_artificial, -1]
 
             if valor > 1e-6:
-                print(f"Variável artificial na coluna {coluna} não é zero: {valor}")
                 return False
 
-    print(f"Variável artificial na coluna {coluna} é zero, solução viável.")
     return True
 
 
