@@ -5,7 +5,11 @@ from big_m_create import big_m_create
 from big_m_checker import big_m_checker
 from simplex import simplex
 
-np.set_printoptions(suppress=True, precision=2)
+np.set_printoptions(
+    suppress=True,      
+    precision=2,        
+    linewidth=np.inf    
+)
 
 if __name__ == "__main__":
     c, a, r, b = carregar_entrada("modelo.txt")

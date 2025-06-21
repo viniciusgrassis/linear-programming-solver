@@ -29,14 +29,17 @@ def linha_pivo(tableau, coluna_pivo):
         return None
 
 def pivoteamento(tableau, linha_pivo, coluna_pivo):
+    num_linhas = tableau.shape[0]
     pivo = tableau[linha_pivo, coluna_pivo]
-    tableau[linha_pivo] /= pivo
 
-    num_linhas, num_colunas = tableau.shape
+    fatores = tableau[:, coluna_pivo].copy()
+
+    tableau[linha_pivo, :] = tableau[linha_pivo, :] / pivo
 
     for i in range(num_linhas):
         if i != linha_pivo:
-            tableau[i] -= tableau[linha_pivo] * tableau[i, coluna_pivo]
+            fator = fatores[i]
+            tableau[i, :] = tableau[i, :] - fator * tableau[linha_pivo, :]
     
     return tableau
 
