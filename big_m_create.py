@@ -29,7 +29,7 @@ def big_m_create(c, a, r, b):
     for coluna in colunas_artificiais:
         tableau[0, coluna] = -M
 
-        linha_artificial = np.where(tableau[:, coluna] == 1)[0][0] + 1
+        linha_artificial = np.where(tableau[:, coluna] == 1)[0][0]
 
         tableau[0, :] = tableau[0, :] + tableau[linha_artificial, :]*M
 

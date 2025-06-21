@@ -17,7 +17,7 @@ def linha_pivo(tableau, coluna_pivo):
     b = tableau[1:, -1]
 
     if np.all(valores <= 0):
-        return -1
+        return None
     
     razoes = np.divide(b, valores, out=np.full_like(b, np.inf), where=valores > 0)
 
