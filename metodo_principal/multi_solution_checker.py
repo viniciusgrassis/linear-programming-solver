@@ -1,6 +1,6 @@
 import numpy as np
-from carregar_entrada import carregar_entrada
-from criar_tableau import criar_tableau
+from tratamento_entrada.carregar_entrada import carregar_entrada
+from tratamento_entrada.criar_tableau import criar_tableau
 
 def multi_solution_checker(tableau):
     linha_objeto = tableau[0, 1:-1]

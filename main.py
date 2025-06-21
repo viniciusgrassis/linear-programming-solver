@@ -1,11 +1,11 @@
 import numpy as np
-from carregar_entrada import carregar_entrada
-from criar_tableau import criar_tableau
-from big_m_create import big_m_create
-from big_m_checker import big_m_checker
-from simplex import simplex, linha_pivo, pivoteamento
-from multi_solution_checker import multi_solution_checker
-from apresentar_solucao import apresentar_solucao
+from tratamento_entrada.carregar_entrada import carregar_entrada
+from tratamento_entrada.criar_tableau import criar_tableau
+from metodo_principal.big_m_create import big_m_create
+from metodo_principal.big_m_checker import big_m_checker
+from metodo_principal.simplex import simplex, linha_pivo, pivoteamento
+from metodo_principal.multi_solution_checker import multi_solution_checker
+from tratamento_saida.apresentar_solucao import apresentar_solucao
 
 np.set_printoptions(
     suppress=True,      

@@ -1,7 +1,7 @@
 import numpy as np
-from carregar_entrada import carregar_entrada
-from criar_tableau import criar_tableau
-from big_m_create import big_m_create
+from tratamento_entrada.carregar_entrada import carregar_entrada
+from tratamento_entrada.criar_tableau import criar_tableau
+from metodo_principal.big_m_create import big_m_create
 
 def big_m_checker(tableau_final, r, a):
     colunas_artificiais = []

@@ -1,5 +1,5 @@
 import numpy as np
-from carregar_entrada import carregar_entrada
+from tratamento_entrada.carregar_entrada import carregar_entrada
 
 def criar_tableau(c, a, r, b):
     num_res, num_var = a.shape
