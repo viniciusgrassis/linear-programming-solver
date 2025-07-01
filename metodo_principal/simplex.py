@@ -64,7 +64,4 @@ def simplex(tableau_inicial):
         tableau = pivoteamento(tableau, indice_linha_pivo, indice_coluna_pivo)
         num_iteracoes += 1
 
-    return tableau
-
-
-    
+    return tableau   

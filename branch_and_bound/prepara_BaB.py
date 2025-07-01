@@ -30,6 +30,8 @@ def adiciona_restricoes(a, r, b, a_extra = None, r_extra = None, b_extra = None)
 
     return novo_a, novo_r, novo_b
 
-
-
-
+def tem_float(bases):
+    for i, v in enumerate(bases):
+        if not (isinstance(v, int) or (isinstance(v, float) and v.is_integer())):
+            return i  # Índice da primeira variável fracionária
+    return None  # Solução é inteira
