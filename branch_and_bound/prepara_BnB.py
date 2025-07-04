@@ -12,10 +12,10 @@ def extrai_bases(tableau, num_var):
         solucao.append(valor)
     return solucao
 
-def prepara_restricoes(valor_a = None, coluna_var = None, num_var = None):
-    if valor_a is not None:
+def prepara_restricoes(coluna_var = None, num_var = None):
+    if coluna_var is not None:
         linha = np.zeros(num_var)
-        linha[coluna_var] = valor_a
+        linha[coluna_var] = 1
         return linha
     else: 
         return None
